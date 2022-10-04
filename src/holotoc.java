@@ -13,7 +13,7 @@ public class holotoc extends JFrame {
     private JButton processButton;
     private JButton loadButton;
     private JPanel panelMain;
-    private JTextArea textArea2;
+    public JTextArea textArea2;
     private JTextField mqttport;
     private JComboBox comboBox1;
     private JCheckBox xCheckBox;
@@ -39,6 +39,8 @@ public class holotoc extends JFrame {
     private CustomCallback callback;
 
     private MQTT_Daemon mqtt_daemon;
+
+    public static holotoc h = new holotoc();
 
     public holotoc() {
         connectButton.addActionListener(new ActionListener() {
@@ -92,10 +94,72 @@ public class holotoc extends JFrame {
                 }
             }
         });
+
+        comboBox1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (((String) comboBox1.getSelectedItem()).equals("Dynamic ToC")){
+                    Dynamic customEvent = new Dynamic();
+                    customEvent.setTitle("Dynamic ToC");
+                    customEvent.setSize(400,300);
+                    customEvent.setVisible(true);
+                }
+
+                if (((String) comboBox1.getSelectedItem()).equals("Custom Model")){
+                    CustomModel customEvent = new CustomModel();
+                    customEvent.setTitle("Custom Model");
+                    customEvent.setSize(400,600);
+                    customEvent.setVisible(true);
+                }
+
+                if (((String) comboBox1.getSelectedItem()).equals("Short ToC")){
+                    ShortToC customEvent = new ShortToC();
+                    customEvent.setTitle("Custom Model");
+                    customEvent.setSize(400,300);
+                    customEvent.setVisible(true);
+                }
+
+                if (((String) comboBox1.getSelectedItem()).equals("Medium ToC")){
+                    MediumToC customEvent = new MediumToC();
+                    customEvent.setTitle("Medium ToC");
+                    customEvent.setSize(400,300);
+                    customEvent.setVisible(true);
+                }
+
+                if (((String) comboBox1.getSelectedItem()).equals("Long ToC")){
+                    LongToC customEvent = new LongToC();
+                    customEvent.setTitle("Long ToC");
+                    customEvent.setSize(400,300);
+                    customEvent.setVisible(true);
+                }
+
+                if (((String) comboBox1.getSelectedItem()).equals("Autopilot Request")){
+                    Autopilot customEvent = new Autopilot();
+                    customEvent.setTitle("Autopilot request");
+                    customEvent.setSize(400,300);
+                    customEvent.setVisible(true);
+                };
+
+                if (((String) comboBox1.getSelectedItem()).equals("Recovery Event")){
+                    Recovery customEvent = new Recovery();
+                    customEvent.setTitle("Recovery Event");
+                    customEvent.setSize(400,300);
+                    customEvent.setVisible(true);
+                };
+
+                if (((String) comboBox1.getSelectedItem()).equals("Custom Event")){
+                    CustomEvent customEvent = new CustomEvent();
+                    customEvent.setTitle("Custom Event");
+                    customEvent.setSize(400,600);
+                    customEvent.setVisible(true);
+                };
+                comboBox1.setSelectedIndex(0);
+            }
+        });
     }
 
     public static void main(String[] args){
-        holotoc h = new holotoc();
+        h = new holotoc();
         h.setContentPane(h.panelMain);
         h.setTitle("HoloToC Event Controller");
         h.setSize(640,480);

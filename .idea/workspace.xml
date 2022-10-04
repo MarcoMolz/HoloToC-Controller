@@ -2,8 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58accea6-23b3-478d-a498-638640afcd3d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ActivatorThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Autopilot.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Autopilot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomEvent.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomModel.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Dynamic.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Dynamic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LongToC.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LongToC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MediumToC.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MediumToC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Recovery.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Recovery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ShortToC.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ShortToC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/holotoc.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/holotoc.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/holotoc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/holotoc.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +56,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "144",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "421",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -62,6 +80,14 @@
       <option name="presentableId" value="Default" />
       <updated>1664305323430</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial">
+      <created>1664911230563</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1664911230563</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -74,5 +100,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial" />
   </component>
 </project>

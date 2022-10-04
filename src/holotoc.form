@@ -110,14 +110,17 @@
         </constraints>
         <properties>
           <model>
+            <item value="Choose Event Type"/>
             <item value="Dynamic ToC"/>
             <item value="Short ToC"/>
             <item value="Medium ToC"/>
             <item value="Long ToC"/>
             <item value="Autopilot Request"/>
+            <item value="Recovery Event"/>
             <item value="Custom Event"/>
             <item value="Custom Model"/>
             <item value="Custom Image"/>
+            <item value="Delete Instance"/>
           </model>
         </properties>
       </component>
