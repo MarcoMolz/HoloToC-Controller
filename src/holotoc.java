@@ -1,5 +1,3 @@
-import com.eclipsesource.json.Json;
-import com.eclipsesource.json.JsonObject;
 import org.eclipse.paho.client.mqttv3.*;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 //import org.eclipse.paho.mqttv5.client.MqttConnectionOptions;
@@ -173,7 +171,6 @@ public class holotoc extends JFrame {
         h.buttonGroup.add(h.onRadioButton);
         h.buttonGroup.add(h.offRadioButton);
         h.setVisible(true);
-        h.processButton.setEnabled(false);
         h.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         Connect customEvent = new Connect();
@@ -184,22 +181,31 @@ public class holotoc extends JFrame {
     }
 
     public void processMessage(String topic, String msg){
-        JsonObject j = Json.parse(msg).asObject();
+        //JsonObject j = Json.parse(msg).asObject();
         System.out.println(topic);
-        System.out.println("JSON:"+ j.get("x").asString());
-        if (topic.contains("vehicle")) {
-            Xfield.setText("X: "+j.get("x").asString());
-            YField.setText("Y: "+j.get("y").asString());
-            Zfield.setText("Z: "+j.get("z").asString());
+        String[] elems = msg.replace("\r","").replace("\n","").replace("\"","").replace(" ","").replace("{","").replace("}","").replace(",",":").split(":");
 
-            oriLabel.setText("Orientation: " + j.get("orientation").asString());
-            SpeedLabel.setText("Speed: " + j.get("speed").asString());
-            APLabel.setText("Autopilot: " + j.get("autopilot").asString());
-        } else if (topic.contains("road")){
-            RoadLabel.setText("RoadID: "+j.get("RoadID").asString());
-            LaneLabel.setText("LaneID"+j.get("LaneID").asString());
-            sLabel.setText("s: "+j.get("s").asString());
-            targetlabel.setText("Target: "+j.get("s").asString());
+        for (int i = 0; i<elems.length;i++){
+            elems[i] = elems[i].substring(0, Math.min(elems[i].length(), 7));
+        }
+
+        if (topic.contains("vehicle")) {
+
+            Xfield.setText("X: "+elems[3]);
+            YField.setText("Y: "+elems[5]);
+            Zfield.setText("Z: "+elems[7]);
+
+            oriLabel.setText("Ori: " + elems[9]);
+            SpeedLabel.setText("Speed: " + elems[11]);
+            APLabel.setText("Autopilot: " + elems[13]);
+        } else if (topic.contains("data/road")){
+            RoadLabel.setText("RoadID: "+elems[3]);
+            LaneLabel.setText("LaneID: "+elems[5]);
+            sLabel.setText("s: "+elems[7]);
+            targetlabel.setText("Target: "+elems[9]);
+        } else if (topic.contains("data/events")){
+            Eventfield.setText("Events: "+elems[5]);
+            openfield.setText("Open: "+elems[7]);
         }
 
     }

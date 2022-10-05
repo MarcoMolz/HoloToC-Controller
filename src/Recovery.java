@@ -47,7 +47,7 @@ public class Recovery extends JDialog {
                 "      \"type\": \"Recovery\",\n" +
                 "      \"reason\": \""+textField1.getText()+"\",\n" +
                 "      \"start\": "+textField2.getText()+",\n" +
-                "      \"ahead\": "+textField3.getText()+",\n" +
+                "      \"ahead\": "+textField3.getText()+"\n" +
                 "    }";
         holotoc.h.textArea2.setText(msg);
         System.out.println(msg);

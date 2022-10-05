@@ -45,8 +45,9 @@ public class ShortToC extends JDialog {
         String msg = "    {\n" +
                 "      \"type\": \"ShortToC\",\n" +
                 "      \"start\": "+textField1.getText()+",\n" +
-                "      \"ahead\": "+textField2.getText()+",\n" +
+                "      \"ahead\": "+textField2.getText()+"\n" +
                 "    }";
+        holotoc.h.textArea2.setText(msg);
         dispose();
     }
 

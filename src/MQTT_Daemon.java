@@ -20,7 +20,7 @@ public class MQTT_Daemon extends Thread {
         try {
             while (true) {
                 if (client.isConnected() && !started) {
-                    client.subscribe("opends-holographic-interface/data/requests",2);
+                    client.subscribe("opends-holographic-interface/data/events",2);
                     client.subscribe("opends-holographic-interface/data/vehicle",2);
                     client.subscribe("opends-holographic-interface/data/road",2);
                     System.out.println("Connected "+client.isConnected());

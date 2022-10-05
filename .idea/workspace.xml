@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58accea6-23b3-478d-a498-638640afcd3d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/eclipsesource_minimal_json.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/json_20200518.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HoloToC-Controller.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HoloToC-Controller.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LongToC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LongToC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MQTT_Daemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MQTT_Daemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MediumToC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MediumToC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Recovery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recovery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ShortToC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ShortToC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/holotoc.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/holotoc.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/holotoc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/holotoc.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664934014393</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="removed old json parser, now using eclipse json minimal">
+      <created>1664935648781</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664935648781</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -106,6 +115,7 @@
     <MESSAGE value="Initial" />
     <MESSAGE value="added multiple forms and dialogs" />
     <MESSAGE value="caffeine" />
-    <option name="LAST_COMMIT_MESSAGE" value="caffeine" />
+    <MESSAGE value="removed old json parser, now using eclipse json minimal" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed old json parser, now using eclipse json minimal" />
   </component>
 </project>
