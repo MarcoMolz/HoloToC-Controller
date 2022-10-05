@@ -13,19 +13,13 @@ public class holotoc extends JFrame {
     public JTextArea textArea2;
     private JTextField mqttport;
     private JComboBox comboBox1;
-    private JCheckBox xCheckBox;
     private JTextField textField1;
     private JTextField textField2;
-    private JCheckBox roadIDCheckBox;
-    private JCheckBox laneIDCheckBox;
-    private JCheckBox sValueCheckBox;
     private JTextField textField3;
     private JTextField textField4;
     private JCheckBox autopilotCheckBox;
     private JRadioButton onRadioButton;
     private JRadioButton offRadioButton;
-    private JCheckBox yCheckBox;
-    private JCheckBox zCheckBox;
     private JTextField textField5;
     private JTextField textField6;
     private JLabel positionLabel;
@@ -42,6 +36,8 @@ public class holotoc extends JFrame {
     private JLabel Eventfield;
     private JLabel openfield;
     private JLabel targetlabel;
+    private JRadioButton positionRadioButton;
+    private JRadioButton roadDataRadioButton;
 
     public static OpenDS openDS = new OpenDS();
 
@@ -54,6 +50,7 @@ public class holotoc extends JFrame {
     private static MQTT_Daemon mqtt_daemon;
 
     public static holotoc h = new holotoc();
+    private ButtonGroup buttonGroup2;
 
 
     public static void connect(String ip, String port){
@@ -168,8 +165,9 @@ public class holotoc extends JFrame {
         h.setTitle("HoloToC Event Controller");
         h.setSize(640,480);
         h.buttonGroup = new ButtonGroup();
-        h.buttonGroup.add(h.onRadioButton);
-        h.buttonGroup.add(h.offRadioButton);
+        h.buttonGroup2 = new ButtonGroup();
+        h.buttonGroup2.add(h.positionRadioButton);
+        h.buttonGroup2.add(h.roadDataRadioButton);
         h.setVisible(true);
         h.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

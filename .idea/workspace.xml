@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="58accea6-23b3-478d-a498-638640afcd3d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LongToC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LongToC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MQTT_Daemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MQTT_Daemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MediumToC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MediumToC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Recovery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recovery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ShortToC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ShortToC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ActivatorThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActivatorThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/holotoc.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/holotoc.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/holotoc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/holotoc.java" afterDir="false" />
     </list>
@@ -44,7 +40,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "222",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "128",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "9",
     "last_opened_file_path": "C:/Users/Marco/Downloads/json-20200518.jar",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
@@ -97,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664935648781</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Doing the json stuff now with hacky string splitting, the libraries keep crashing without errors">
+      <created>1664938376919</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664938376919</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -116,6 +120,7 @@
     <MESSAGE value="added multiple forms and dialogs" />
     <MESSAGE value="caffeine" />
     <MESSAGE value="removed old json parser, now using eclipse json minimal" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed old json parser, now using eclipse json minimal" />
+    <MESSAGE value="Doing the json stuff now with hacky string splitting, the libraries keep crashing without errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Doing the json stuff now with hacky string splitting, the libraries keep crashing without errors" />
   </component>
 </project>

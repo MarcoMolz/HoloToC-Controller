@@ -1,37 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="holotoc">
-  <grid id="27dc6" binding="panelMain" layout-manager="GridLayoutManager" row-count="12" column-count="17" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="panelMain" layout-manager="GridLayoutManager" row-count="11" column-count="20" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="750" height="470"/>
+      <xy x="10" y="74" width="1069" height="470"/>
     </constraints>
     <properties/>
     <border type="none"/>
     <children>
-      <component id="5803d" class="javax.swing.JTextArea" binding="textArea2" default-binding="true">
+      <component id="fa5f7" class="javax.swing.JLabel">
         <constraints>
-          <grid row="2" column="1" row-span="9" col-span="3" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="50"/>
-          </grid>
-        </constraints>
-        <properties/>
-      </component>
-      <hspacer id="c13cf">
-        <constraints>
-          <grid row="0" column="13" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-      </hspacer>
-      <component id="5c60a" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="1" column="5" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="16" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Attributes"/>
+          <text value="OpenDS:"/>
         </properties>
       </component>
+      <component id="df422" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="16" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Vehicle:"/>
+        </properties>
+      </component>
+      <component id="7422" class="javax.swing.JLabel" binding="positionLabel">
+        <constraints>
+          <grid row="3" column="16" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Position:"/>
+        </properties>
+      </component>
+      <component id="18ca0" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="18" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="HoloToC:"/>
+        </properties>
+      </component>
+      <component id="daace" class="javax.swing.JLabel" binding="Eventfield">
+        <constraints>
+          <grid row="2" column="18" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Events:"/>
+        </properties>
+      </component>
+      <component id="ca543" class="javax.swing.JLabel" binding="openfield">
+        <constraints>
+          <grid row="3" column="18" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Open:"/>
+        </properties>
+      </component>
+      <component id="7733d" class="javax.swing.JLabel" binding="APLabel">
+        <constraints>
+          <grid row="9" column="16" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Autopilot: null"/>
+        </properties>
+      </component>
+      <component id="e6dc9" class="javax.swing.JLabel" binding="SpeedLabel">
+        <constraints>
+          <grid row="8" column="16" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Speed: null"/>
+        </properties>
+      </component>
+      <component id="73e7a" class="javax.swing.JLabel" binding="oriLabel">
+        <constraints>
+          <grid row="7" column="16" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Orientation: null"/>
+        </properties>
+      </component>
+      <component id="5c042" class="javax.swing.JLabel" binding="Xfield">
+        <constraints>
+          <grid row="4" column="16" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="3" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="X: null"/>
+        </properties>
+      </component>
+      <component id="5a32" class="javax.swing.JLabel" binding="YField">
+        <constraints>
+          <grid row="5" column="16" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="3" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Y: null"/>
+        </properties>
+      </component>
+      <component id="2b25" class="javax.swing.JLabel" binding="Zfield">
+        <constraints>
+          <grid row="6" column="16" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="3" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Z: null"/>
+        </properties>
+      </component>
+      <hspacer id="9f6be">
+        <constraints>
+          <grid row="1" column="19" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="4ce40" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="5" column="18" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="OpenDRIVE:"/>
+        </properties>
+      </component>
+      <component id="39f29" class="javax.swing.JLabel" binding="RoadLabel">
+        <constraints>
+          <grid row="6" column="18" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="RoadID: null"/>
+        </properties>
+      </component>
+      <component id="91567" class="javax.swing.JLabel" binding="LaneLabel">
+        <constraints>
+          <grid row="7" column="18" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="LaneID: null"/>
+        </properties>
+      </component>
+      <component id="ceb10" class="javax.swing.JLabel" binding="sLabel">
+        <constraints>
+          <grid row="8" column="18" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="s: null"/>
+        </properties>
+      </component>
+      <component id="6d7e6" class="javax.swing.JLabel" binding="targetlabel">
+        <constraints>
+          <grid row="9" column="18" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Target: null"/>
+        </properties>
+      </component>
+      <hspacer id="1f03">
+        <constraints>
+          <grid row="1" column="17" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
       <component id="fcbe6" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
         <constraints>
-          <grid row="2" column="5" row-span="1" col-span="7" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="1" row-span="1" col-span="4" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <model>
@@ -49,50 +174,41 @@
           </model>
         </properties>
       </component>
-      <component id="bb909" class="javax.swing.JCheckBox" binding="autopilotCheckBox" default-binding="true">
+      <component id="4293" class="javax.swing.JLabel">
         <constraints>
-          <grid row="10" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Autopilot"/>
+          <text value="Direct Message"/>
         </properties>
       </component>
-      <component id="eaf87" class="javax.swing.JRadioButton" binding="onRadioButton" default-binding="true">
+      <component id="a98e5" class="javax.swing.JLabel">
         <constraints>
-          <grid row="10" column="6" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="17" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <selected value="true"/>
-          <text value="On"/>
+          <text value="Data"/>
         </properties>
       </component>
-      <component id="7e852" class="javax.swing.JRadioButton" binding="offRadioButton" default-binding="true">
+      <component id="a311d" class="javax.swing.JLabel">
         <constraints>
-          <grid row="10" column="9" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="6" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Off"/>
+          <text value="Conditions:"/>
         </properties>
       </component>
-      <component id="48c70" class="javax.swing.JTextField" binding="textField4" default-binding="true">
+      <component id="65a48" class="javax.swing.JTextField" binding="textField6" default-binding="true">
         <constraints>
-          <grid row="9" column="6" row-span="1" col-span="6" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="2" column="8" row-span="1" col-span="7" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
         <properties/>
       </component>
-      <component id="cbc37" class="javax.swing.JTextField" binding="textField3" default-binding="true">
+      <component id="f507d" class="javax.swing.JTextField" binding="textField5" default-binding="true">
         <constraints>
-          <grid row="8" column="6" row-span="1" col-span="6" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties/>
-      </component>
-      <component id="6e77c" class="javax.swing.JTextField" binding="textField2" default-binding="true">
-        <constraints>
-          <grid row="7" column="6" row-span="1" col-span="6" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="3" column="8" row-span="1" col-span="7" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
@@ -100,275 +216,172 @@
       </component>
       <component id="baeaa" class="javax.swing.JTextField" binding="textField1" default-binding="true">
         <constraints>
-          <grid row="6" column="6" row-span="1" col-span="6" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="4" column="8" row-span="1" col-span="7" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="6e77c" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+        <constraints>
+          <grid row="6" column="8" row-span="1" col-span="7" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
         <properties/>
       </component>
-      <component id="b6556" class="javax.swing.JCheckBox" binding="sValueCheckBox" default-binding="true">
+      <component id="cbc37" class="javax.swing.JTextField" binding="textField3" default-binding="true">
         <constraints>
-          <grid row="9" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="s-Value"/>
-        </properties>
-      </component>
-      <component id="79350" class="javax.swing.JCheckBox" binding="laneIDCheckBox" default-binding="true">
-        <constraints>
-          <grid row="8" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="LaneID"/>
-        </properties>
-      </component>
-      <component id="307f7" class="javax.swing.JCheckBox" binding="roadIDCheckBox" default-binding="true">
-        <constraints>
-          <grid row="7" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="RoadID"/>
-        </properties>
-      </component>
-      <component id="34966" class="javax.swing.JCheckBox" binding="xCheckBox" default-binding="true">
-        <constraints>
-          <grid row="4" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="X"/>
-        </properties>
-      </component>
-      <component id="73a8f" class="javax.swing.JCheckBox" binding="yCheckBox" default-binding="true">
-        <constraints>
-          <grid row="5" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Y"/>
-        </properties>
-      </component>
-      <component id="402ae" class="javax.swing.JCheckBox" binding="zCheckBox" default-binding="true">
-        <constraints>
-          <grid row="6" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Z"/>
-        </properties>
-      </component>
-      <component id="f507d" class="javax.swing.JTextField" binding="textField5" default-binding="true">
-        <constraints>
-          <grid row="5" column="6" row-span="1" col-span="6" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="7" column="8" row-span="1" col-span="7" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
         <properties/>
       </component>
-      <component id="65a48" class="javax.swing.JTextField" binding="textField6" default-binding="true">
+      <component id="48c70" class="javax.swing.JTextField" binding="textField4" default-binding="true">
         <constraints>
-          <grid row="4" column="6" row-span="1" col-span="6" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="8" column="8" row-span="1" col-span="7" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
         <properties/>
       </component>
-      <component id="fa5f7" class="javax.swing.JLabel">
+      <component id="bb909" class="javax.swing.JCheckBox" binding="autopilotCheckBox" default-binding="true">
         <constraints>
-          <grid row="1" column="13" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="10" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="OpenDS:"/>
+          <text value="Autopilot"/>
         </properties>
       </component>
-      <component id="df422" class="javax.swing.JLabel">
+      <component id="cdb61" class="javax.swing.JRadioButton" binding="positionRadioButton" default-binding="true">
         <constraints>
-          <grid row="2" column="13" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+          <grid row="3" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Vehicle:"/>
+          <text value="Position"/>
         </properties>
       </component>
-      <component id="7422" class="javax.swing.JLabel" binding="positionLabel">
+      <component id="c9b55" class="javax.swing.JRadioButton" binding="roadDataRadioButton" default-binding="true">
         <constraints>
-          <grid row="3" column="13" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+          <grid row="7" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Position:"/>
+          <text value="OpenDRIVE"/>
         </properties>
       </component>
-      <hspacer id="4f421">
+      <hspacer id="cce7">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
       </hspacer>
-      <component id="18ca0" class="javax.swing.JLabel">
+      <component id="bcb70" class="javax.swing.JCheckBox" binding="conditionalCheckBox" default-binding="true">
         <constraints>
-          <grid row="1" column="15" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+          <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="HoloToC:"/>
-        </properties>
-      </component>
-      <component id="4293" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Direct Message"/>
+          <text value="Conditional"/>
         </properties>
       </component>
       <component id="af234" class="javax.swing.JButton" binding="processButton" default-binding="true">
         <constraints>
-          <grid row="11" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="10" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <enabled value="true"/>
           <text value="Send"/>
         </properties>
       </component>
-      <component id="bcb70" class="javax.swing.JCheckBox" binding="conditionalCheckBox" default-binding="true">
+      <scrollpane id="92cb0">
         <constraints>
-          <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="1" row-span="8" col-span="4" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties>
-          <text value="Conditional"/>
-        </properties>
-      </component>
-      <component id="a311d" class="javax.swing.JLabel">
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="5803d" class="javax.swing.JTextArea" binding="textArea2" default-binding="true">
+            <constraints/>
+            <properties/>
+          </component>
+        </children>
+      </scrollpane>
+      <hspacer id="dab31">
         <constraints>
-          <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Conditions:"/>
-        </properties>
-      </component>
-      <component id="daace" class="javax.swing.JLabel" binding="Eventfield">
-        <constraints>
-          <grid row="2" column="15" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Events:"/>
-        </properties>
-      </component>
-      <component id="ca543" class="javax.swing.JLabel" binding="openfield">
-        <constraints>
-          <grid row="3" column="15" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Open:"/>
-        </properties>
-      </component>
-      <component id="7733d" class="javax.swing.JLabel" binding="APLabel">
-        <constraints>
-          <grid row="9" column="13" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Autopilot: null"/>
-        </properties>
-      </component>
-      <component id="e6dc9" class="javax.swing.JLabel" binding="SpeedLabel">
-        <constraints>
-          <grid row="8" column="13" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Speed: null"/>
-        </properties>
-      </component>
-      <component id="73e7a" class="javax.swing.JLabel" binding="oriLabel">
-        <constraints>
-          <grid row="7" column="13" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Orientation: null"/>
-        </properties>
-      </component>
-      <component id="5c042" class="javax.swing.JLabel" binding="Xfield">
-        <constraints>
-          <grid row="4" column="13" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="3" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="X: null"/>
-        </properties>
-      </component>
-      <component id="5a32" class="javax.swing.JLabel" binding="YField">
-        <constraints>
-          <grid row="5" column="13" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="3" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Y: null"/>
-        </properties>
-      </component>
-      <component id="2b25" class="javax.swing.JLabel" binding="Zfield">
-        <constraints>
-          <grid row="6" column="13" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="3" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Z: null"/>
-        </properties>
-      </component>
-      <hspacer id="711b2">
-        <constraints>
-          <grid row="2" column="12" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
       </hspacer>
-      <hspacer id="8a4b4">
+      <component id="7e852" class="javax.swing.JRadioButton" binding="offRadioButton" default-binding="true">
         <constraints>
-          <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="10" column="11" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Off"/>
+        </properties>
+      </component>
+      <component id="eaf87" class="javax.swing.JRadioButton" binding="onRadioButton" default-binding="true">
+        <constraints>
+          <grid row="10" column="8" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <selected value="true"/>
+          <text value="On"/>
+        </properties>
+      </component>
+      <hspacer id="a21b4">
+        <constraints>
+          <grid row="1" column="15" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
       </hspacer>
-      <hspacer id="9f6be">
+      <component id="a7986" class="javax.swing.JLabel">
         <constraints>
-          <grid row="1" column="16" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-      </hspacer>
-      <hspacer id="637f1">
-        <constraints>
-          <grid row="0" column="15" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-      </hspacer>
-      <component id="4ce40" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="5" column="15" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+          <grid row="2" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="OpenDRIVE:"/>
+          <text value="X"/>
         </properties>
       </component>
-      <component id="39f29" class="javax.swing.JLabel" binding="RoadLabel">
+      <component id="234d3" class="javax.swing.JLabel">
         <constraints>
-          <grid row="6" column="15" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+          <grid row="3" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="RoadID: null"/>
+          <text value="Y"/>
         </properties>
       </component>
-      <component id="91567" class="javax.swing.JLabel" binding="LaneLabel">
+      <component id="9e561" class="javax.swing.JLabel">
         <constraints>
-          <grid row="7" column="15" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+          <grid row="4" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="LaneID: null"/>
+          <text value="Z"/>
         </properties>
       </component>
-      <component id="ceb10" class="javax.swing.JLabel" binding="sLabel">
+      <component id="2a059" class="javax.swing.JLabel">
         <constraints>
-          <grid row="8" column="15" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+          <grid row="6" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="s: null"/>
+          <text value="RoadID"/>
         </properties>
       </component>
-      <component id="6d7e6" class="javax.swing.JLabel" binding="targetlabel">
+      <component id="8a849" class="javax.swing.JLabel">
         <constraints>
-          <grid row="9" column="15" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+          <grid row="7" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Target: null"/>
+          <text value="LaneID"/>
         </properties>
       </component>
-      <hspacer id="1f03">
+      <component id="f9dfd" class="javax.swing.JLabel">
         <constraints>
-          <grid row="1" column="14" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="8" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
-      </hspacer>
+        <properties>
+          <text value="s"/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>
