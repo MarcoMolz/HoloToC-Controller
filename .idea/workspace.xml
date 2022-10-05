@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58accea6-23b3-478d-a498-638640afcd3d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/json_20200518.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Connect.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Connect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/OpenDS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/imageRequest.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/imageRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/eclipsesource_minimal_json.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/json_20200518.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HoloToC-Controller.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HoloToC-Controller.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CustomCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomCallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MQTT_Daemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MQTT_Daemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/holotoc.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/holotoc.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/holotoc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/holotoc.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +36,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.Annotations": "true",
     "Repository.Attach.JavaDocs": "true",
     "Repository.Attach.Sources": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -87,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664922300102</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="caffeine">
+      <created>1664934014393</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664934014393</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -104,6 +105,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial" />
     <MESSAGE value="added multiple forms and dialogs" />
-    <option name="LAST_COMMIT_MESSAGE" value="added multiple forms and dialogs" />
+    <MESSAGE value="caffeine" />
+    <option name="LAST_COMMIT_MESSAGE" value="caffeine" />
   </component>
 </project>

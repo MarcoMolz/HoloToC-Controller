@@ -1,6 +1,7 @@
+import com.eclipsesource.json.Json;
+import com.eclipsesource.json.JsonObject;
 import org.eclipse.paho.client.mqttv3.*;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
-import org.json.JSONObject;
 //import org.eclipse.paho.mqttv5.client.MqttConnectionOptions;
 
 import javax.swing.*;
@@ -50,7 +51,7 @@ public class holotoc extends JFrame {
 
     public static MqttAsyncClient mqtt;
 
-    private static CustomCallback callback;
+    private CustomCallback callback;
 
     private static MQTT_Daemon mqtt_daemon;
 
@@ -66,7 +67,7 @@ public class holotoc extends JFrame {
             connOpts.setConnectionTimeout(60);
             connOpts.setKeepAliveInterval(60);
             connOpts.setMqttVersion(MqttConnectOptions.MQTT_VERSION_3_1);
-            callback = new CustomCallback();
+            CustomCallback callback = new CustomCallback();
             mqtt.setCallback(callback);
             mqtt.connect(connOpts);
 
@@ -182,20 +183,23 @@ public class holotoc extends JFrame {
 
     }
 
-    public void processMessage(String topic, JSONObject j){
-        if (topic.contains("vehcile")) {
-            Xfield.setText("X: "+j.getString("x"));
-            YField.setText("Y: "+j.getString("y"));
-            Zfield.setText("Z: "+j.getString("z"));
+    public void processMessage(String topic, String msg){
+        JsonObject j = Json.parse(msg).asObject();
+        System.out.println(topic);
+        System.out.println("JSON:"+ j.get("x").asString());
+        if (topic.contains("vehicle")) {
+            Xfield.setText("X: "+j.get("x").asString());
+            YField.setText("Y: "+j.get("y").asString());
+            Zfield.setText("Z: "+j.get("z").asString());
 
-            oriLabel.setText("Orientation: " + j.getString("orientation"));
-            SpeedLabel.setText("Speed: " + j.getString("speed"));
-            APLabel.setText("Autopilot: " + j.getString("autopilot"));
+            oriLabel.setText("Orientation: " + j.get("orientation").asString());
+            SpeedLabel.setText("Speed: " + j.get("speed").asString());
+            APLabel.setText("Autopilot: " + j.get("autopilot").asString());
         } else if (topic.contains("road")){
-            RoadLabel.setText("RoadID: "+j.getString("RoadID"));
-            LaneLabel.setText("LaneID"+j.getString("LaneID"));
-            sLabel.setText("s: "+j.getString("s"));
-            targetlabel.setText("Target: "+j.getString("s"));
+            RoadLabel.setText("RoadID: "+j.get("RoadID").asString());
+            LaneLabel.setText("LaneID"+j.get("LaneID").asString());
+            sLabel.setText("s: "+j.get("s").asString());
+            targetlabel.setText("Target: "+j.get("s").asString());
         }
 
     }
