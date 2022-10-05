@@ -2,24 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58accea6-23b3-478d-a498-638640afcd3d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ActivatorThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Autopilot.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Autopilot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomEvent.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomModel.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Dynamic.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Dynamic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LongToC.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LongToC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MediumToC.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MediumToC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recovery.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Recovery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ShortToC.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ShortToC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/json_20200518.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Connect.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Connect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OpenDS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/imageRequest.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/imageRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HoloToC-Controller.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HoloToC-Controller.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MQTT_Daemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MQTT_Daemon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/holotoc.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/holotoc.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/holotoc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/holotoc.java" afterDir="false" />
     </list>
@@ -56,8 +48,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "421",
-    "project.structure.last.edited": "Project",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "222",
+    "last_opened_file_path": "C:/Users/Marco/Downloads/json-20200518.jar",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
@@ -87,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664911230563</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added multiple forms and dialogs">
+      <created>1664922300102</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664922300102</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -103,6 +103,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial" />
+    <MESSAGE value="added multiple forms and dialogs" />
+    <option name="LAST_COMMIT_MESSAGE" value="added multiple forms and dialogs" />
   </component>
 </project>

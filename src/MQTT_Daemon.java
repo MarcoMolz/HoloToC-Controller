@@ -27,7 +27,7 @@ public class MQTT_Daemon extends Thread {
                     MqttMessage msg = new MqttMessage();
                     msg.setPayload("test".getBytes(StandardCharsets.UTF_8));
                     msg.setQos(2);
-                    client.publish("java/test",msg);
+                    //client.publish("holotoc-controller/test",msg);
                     System.out.println("sent message");
                     started = true;
                 }

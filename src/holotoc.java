@@ -1,5 +1,6 @@
 import org.eclipse.paho.client.mqttv3.*;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
+import org.json.JSONObject;
 //import org.eclipse.paho.mqttv5.client.MqttConnectionOptions;
 
 import javax.swing.*;
@@ -8,10 +9,7 @@ import java.awt.event.ActionListener;
 import java.nio.charset.StandardCharsets;
 
 public class holotoc extends JFrame {
-    private JTextField mqttaddress;
-    private JButton connectButton;
     private JButton processButton;
-    private JButton loadButton;
     private JPanel panelMain;
     public JTextArea textArea2;
     private JTextField mqttport;
@@ -31,59 +29,59 @@ public class holotoc extends JFrame {
     private JCheckBox zCheckBox;
     private JTextField textField5;
     private JTextField textField6;
+    private JLabel positionLabel;
+    private JLabel oriLabel;
+    private JLabel SpeedLabel;
+    private JLabel RoadLabel;
+    private JLabel LaneLabel;
+    private JLabel sLabel;
+    private JLabel APLabel;
+    private JCheckBox conditionalCheckBox;
+    private JLabel Xfield;
+    private JLabel YField;
+    private JLabel Zfield;
+    private JLabel Eventfield;
+    private JLabel openfield;
+    private JLabel targetlabel;
+
+    public static OpenDS openDS = new OpenDS();
 
     private ButtonGroup buttonGroup;
 
-    private MqttAsyncClient mqtt;
+    public static MqttAsyncClient mqtt;
 
-    private CustomCallback callback;
+    private static CustomCallback callback;
 
-    private MQTT_Daemon mqtt_daemon;
+    private static MQTT_Daemon mqtt_daemon;
 
     public static holotoc h = new holotoc();
 
+
+    public static void connect(String ip, String port){
+        String tmp = "tcp://" + ip + ":" + port;
+        try {
+            mqtt = new MqttAsyncClient(tmp, "holotocController_" + MqttClient.generateClientId(), new MemoryPersistence());
+            MqttConnectOptions connOpts = new MqttConnectOptions();
+            connOpts.setCleanSession(true);
+            connOpts.setConnectionTimeout(60);
+            connOpts.setKeepAliveInterval(60);
+            connOpts.setMqttVersion(MqttConnectOptions.MQTT_VERSION_3_1);
+            callback = new CustomCallback();
+            mqtt.setCallback(callback);
+            mqtt.connect(connOpts);
+
+            mqtt_daemon = new MQTT_Daemon(mqtt);
+            mqtt_daemon.start();
+
+
+
+        } catch (MqttException ex) {
+            throw new RuntimeException(ex);
+        }
+
+    };
     public holotoc() {
-        connectButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (connectButton.getText().equals("Connect")) {
-                    String tmp = "tcp://" + mqttaddress.getText() + ":" + mqttport.getText();
-                    //tmp = "tcp://127.0.0.1:1883";
-                    System.out.println(tmp);
-                    try {
-                        processButton.setEnabled(true);
-                        mqtt = new MqttAsyncClient(tmp, "holotocController_" + MqttClient.generateClientId(), new MemoryPersistence());
-                        MqttConnectOptions connOpts = new MqttConnectOptions();
-                        connOpts.setCleanSession(true);
-                        connOpts.setConnectionTimeout(60);
-                        connOpts.setKeepAliveInterval(60);
-                        connOpts.setMqttVersion(MqttConnectOptions.MQTT_VERSION_3_1);
-                        callback = new CustomCallback();
-                        mqtt.setCallback(callback);
-                        //mqtt_daemon = new MQTT_Daemon(mqtt);
-                        connectButton.setText("Disconnect");
-                        //mqtt_daemon.start();
-                        mqtt.connect(connOpts);
 
-                        mqtt_daemon = new MQTT_Daemon(mqtt);
-                        mqtt_daemon.start();
-
-
-
-                    } catch (MqttException ex) {
-                        throw new RuntimeException(ex);
-                    }
-                } else {
-                    try {
-                        mqtt.disconnect();
-                        processButton.setEnabled(false);
-                        connectButton.setText("Connect");
-                    } catch (MqttException ex) {
-                        throw new RuntimeException(ex);
-                    }
-                }
-            }
-        });
         processButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -147,6 +145,13 @@ public class holotoc extends JFrame {
                     customEvent.setVisible(true);
                 };
 
+                if (((String) comboBox1.getSelectedItem()).equals("Custom Image")){
+                    imageRequest customEvent = new imageRequest();
+                    customEvent.setTitle("Recovery Event");
+                    customEvent.setSize(400,300);
+                    customEvent.setVisible(true);
+                };
+
                 if (((String) comboBox1.getSelectedItem()).equals("Custom Event")){
                     CustomEvent customEvent = new CustomEvent();
                     customEvent.setTitle("Custom Event");
@@ -170,9 +175,28 @@ public class holotoc extends JFrame {
         h.processButton.setEnabled(false);
         h.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        Connect customEvent = new Connect();
+        customEvent.setTitle("Connect to MQTT Broker");
+        customEvent.setSize(400,200);
+        customEvent.setVisible(true);
+
     }
 
-    public void processMessage(String message){
-        System.out.println(message);
+    public void processMessage(String topic, JSONObject j){
+        if (topic.contains("vehcile")) {
+            Xfield.setText("X: "+j.getString("x"));
+            YField.setText("Y: "+j.getString("y"));
+            Zfield.setText("Z: "+j.getString("z"));
+
+            oriLabel.setText("Orientation: " + j.getString("orientation"));
+            SpeedLabel.setText("Speed: " + j.getString("speed"));
+            APLabel.setText("Autopilot: " + j.getString("autopilot"));
+        } else if (topic.contains("road")){
+            RoadLabel.setText("RoadID: "+j.getString("RoadID"));
+            LaneLabel.setText("LaneID"+j.getString("LaneID"));
+            sLabel.setText("s: "+j.getString("s"));
+            targetlabel.setText("Target: "+j.getString("s"));
+        }
+
     }
 }
