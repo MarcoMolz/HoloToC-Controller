@@ -78,7 +78,7 @@ public class CustomEvent extends JDialog {
                 "      \"numOfNotifications\": "+(int)numofupdates.getValue()+",\n" +
                 "      \"visible\": "+showSignsCheckBox.isSelected()+",\n" +
                 "      \"silent\": "+silentCheckBox.isSelected()+",\n" +
-                "      \"showRing\": "+showGoalRingCheckBox.isSelected()+"\n" +
+                "      \"ringVisible\": "+showGoalRingCheckBox.isSelected()+"\n" +
                 "    }";
 
         System.out.println(msg);

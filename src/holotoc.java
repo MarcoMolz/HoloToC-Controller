@@ -13,15 +13,15 @@ public class holotoc extends JFrame {
     public JTextArea textArea2;
     private JTextField mqttport;
     private JComboBox comboBox1;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JTextField textField4;
+    private JTextField Zcon;
+    private JTextField Ridcon;
+    private JTextField Lidcon;
+    private JTextField scon;
     private JCheckBox autopilotCheckBox;
     private JRadioButton onRadioButton;
     private JRadioButton offRadioButton;
-    private JTextField textField5;
-    private JTextField textField6;
+    private JTextField Ycon;
+    private JTextField Xcon;
     private JLabel positionLabel;
     private JLabel oriLabel;
     private JLabel SpeedLabel;
@@ -81,11 +81,18 @@ public class holotoc extends JFrame {
         processButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    mqtt.publish("opends-holographic-interface/request/event", new MqttMessage(textArea2.getText().getBytes(StandardCharsets.UTF_8)));
-                } catch (MqttException ex) {
-                    throw new RuntimeException(ex);
+                if (!conditionalCheckBox.isSelected()) {
+                    try {
+                        mqtt.publish("opends-holographic-interface/request/event", new MqttMessage(textArea2.getText().getBytes(StandardCharsets.UTF_8)));
+                    } catch (MqttException ex) {
+                        throw new RuntimeException(ex);
+                    }
                 }
+                else {
+                    ActivatorThread activatorThread = new ActivatorThread(mqtt,textArea2.getText(),Float.parseFloat(Xcon.getText()),Float.parseFloat(Ycon.getText()),Float.parseFloat(Zcon.getText()),positionRadioButton.isSelected(),Integer.parseInt(Ridcon.getText()),Integer.parseInt(Lidcon.getText()),Float.parseFloat(scon.getText()),onRadioButton.isSelected(),autopilotCheckBox.isSelected(),openDS);
+                    activatorThread.start();
+                }
+                textArea2.setText("");
             }
         });
 
@@ -162,8 +169,8 @@ public class holotoc extends JFrame {
     public static void main(String[] args){
         h = new holotoc();
         h.setContentPane(h.panelMain);
-        h.setTitle("HoloToC Event Controller");
-        h.setSize(640,480);
+        h.setTitle("HoloToC Event Controller : Disconnected");
+        h.setSize(1000,500);
         h.buttonGroup = new ButtonGroup();
         h.buttonGroup2 = new ButtonGroup();
         h.buttonGroup2.add(h.positionRadioButton);
@@ -180,14 +187,14 @@ public class holotoc extends JFrame {
 
     public void processMessage(String topic, String msg){
         //JsonObject j = Json.parse(msg).asObject();
-        System.out.println(topic);
+        //System.out.println(topic);
         String[] elems = msg.replace("\r","").replace("\n","").replace("\"","").replace(" ","").replace("{","").replace("}","").replace(",",":").split(":");
 
         for (int i = 0; i<elems.length;i++){
             elems[i] = elems[i].substring(0, Math.min(elems[i].length(), 7));
         }
 
-        if (topic.contains("vehicle")) {
+        if (topic.contains("data/vehicle")) {
 
             Xfield.setText("X: "+elems[3]);
             YField.setText("Y: "+elems[5]);
@@ -196,11 +203,24 @@ public class holotoc extends JFrame {
             oriLabel.setText("Ori: " + elems[9]);
             SpeedLabel.setText("Speed: " + elems[11]);
             APLabel.setText("Autopilot: " + elems[13]);
+
+            openDS.setX(Float.parseFloat(elems[3]));
+            openDS.setY(Float.parseFloat(elems[5]));
+            openDS.setZ(Float.parseFloat(elems[7]));
+
+            openDS.setOrientation(Float.parseFloat(elems[9]));
+            openDS.setAutopilot(Boolean.parseBoolean(elems[13]));
+
         } else if (topic.contains("data/road")){
             RoadLabel.setText("RoadID: "+elems[3]);
             LaneLabel.setText("LaneID: "+elems[5]);
             sLabel.setText("s: "+elems[7]);
             targetlabel.setText("Target: "+elems[9]);
+
+            openDS.setRoadID(Integer.parseInt(elems[3]));
+            openDS.setLaneID(Integer.parseInt(elems[5]));
+            openDS.setS(Float.parseFloat(elems[7]));
+
         } else if (topic.contains("data/events")){
             Eventfield.setText("Events: "+elems[5]);
             openfield.setText("Open: "+elems[7]);

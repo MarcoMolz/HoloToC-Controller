@@ -20,7 +20,7 @@ public class CustomCallback implements MqttCallback {
     public void messageArrived(String topic, MqttMessage message) throws Exception {
         String msg = new String(message.getPayload());
         //JSONObject j = new JSONObject(msg);
-        System.out.println(msg);
+        //System.out.println(msg);
         holotoc.h.processMessage(topic, msg);
     }
 

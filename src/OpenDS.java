@@ -7,12 +7,21 @@ public class OpenDS {
     private float speed;
     private float orientation;
 
+    private boolean autopilot;
+
     private int roadID;
     private int laneID;
     private float s;
 
+    public synchronized boolean getAutopilot() {
+        return autopilot;
+    }
 
-    public synchronized float getX() {
+    public synchronized void setAutopilot(boolean autopilot) {
+        this.autopilot = autopilot;
+    }
+
+    public  float getX() {
         return x;
     }
 
@@ -20,7 +29,7 @@ public class OpenDS {
         this.x = x;
     }
 
-    public synchronized float getY() {
+    public  float getY() {
         return y;
     }
 
@@ -28,7 +37,7 @@ public class OpenDS {
         this.y = y;
     }
 
-    public synchronized float getZ() {
+    public  float getZ() {
         return z;
     }
 
@@ -36,7 +45,7 @@ public class OpenDS {
         this.z = z;
     }
 
-    public synchronized float getSpeed() {
+    public  float getSpeed() {
         return speed;
     }
 
@@ -44,7 +53,7 @@ public class OpenDS {
         this.speed = speed;
     }
 
-    public synchronized float getOrientation() {
+    public  float getOrientation() {
         return orientation;
     }
 
@@ -52,7 +61,7 @@ public class OpenDS {
         this.orientation = orientation;
     }
 
-    public synchronized int getRoadID() {
+    public  int getRoadID() {
         return roadID;
     }
 
@@ -60,7 +69,7 @@ public class OpenDS {
         this.roadID = roadID;
     }
 
-    public synchronized int getLaneID() {
+    public  int getLaneID() {
         return laneID;
     }
 
@@ -68,7 +77,7 @@ public class OpenDS {
         this.laneID = laneID;
     }
 
-    public synchronized float getS() {
+    public  float getS() {
         return s;
     }
 

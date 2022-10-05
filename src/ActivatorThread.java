@@ -1,55 +1,95 @@
+import org.eclipse.paho.client.mqttv3.MqttAsyncClient;
+import org.eclipse.paho.client.mqttv3.MqttException;
+import org.eclipse.paho.client.mqttv3.MqttMessage;
+
+import java.nio.charset.StandardCharsets;
+
 public class ActivatorThread extends Thread{
+
+    private MqttAsyncClient mqtt;
 
     private String payload;
 
     private float x;
-    private boolean checkX;
-
     private float y;
-    private boolean checkY;
-
     private float z;
-    private boolean checkZ;
+    private boolean coordinates;
 
-    private float RoadID;
-    private boolean checkRoadID;
+    private int RoadID;
 
-    private float LaneID;
-    private boolean checkLaneID;
-
+    private int LaneID;
     private float s;
-    private boolean checkS;
+
 
     private boolean autopilot;
     private boolean checkAutopilot;
 
-    public ActivatorThread(String payload, float x, boolean checkX, float y, boolean checkY, float z, boolean checkZ, float roadID, boolean checkRoadID, float laneID, boolean checkLaneID, float s, boolean checkS, boolean autopilot, boolean checkAutopilot) {
+    private OpenDS openDS;
+
+    public ActivatorThread(MqttAsyncClient mqtt, String payload, float x, float y, float z, boolean coordinates, int roadID, int laneID, float s, boolean autopilot, boolean checkAutopilot, OpenDS openDS) {
+        this.mqtt = mqtt;
         this.payload = payload;
         this.x = x;
-        this.checkX = checkX;
         this.y = y;
-        this.checkY = checkY;
         this.z = z;
-        this.checkZ = checkZ;
+        this.coordinates = coordinates;
         RoadID = roadID;
-        this.checkRoadID = checkRoadID;
         LaneID = laneID;
-        this.checkLaneID = checkLaneID;
         this.s = s;
-        this.checkS = checkS;
         this.autopilot = autopilot;
         this.checkAutopilot = checkAutopilot;
+        this.openDS = openDS;
     }
 
     @Override
     public void run() {
-        while (true){
-            //TODO
-
-
-
-
-
+        if (coordinates){
+            while (true){
+                System.out.println("checking");
+               if (Math.abs(openDS.getX()-x) < 1 && Math.abs(openDS.getY()-y)<1 && Math.abs(openDS.getZ()-z)<1){
+                   if (checkAutopilot){
+                       if (autopilot==openDS.getAutopilot()){
+                           try {
+                               mqtt.publish("opends-holographic-interface/request/event",new MqttMessage(payload.getBytes(StandardCharsets.UTF_8)));
+                           } catch (MqttException e) {
+                               throw new RuntimeException(e);
+                           }
+                       }
+                   } else {
+                       try {
+                           mqtt.publish("opends-holographic-interface/request/event",new MqttMessage(payload.getBytes(StandardCharsets.UTF_8)));
+                       } catch (MqttException e) {
+                           throw new RuntimeException(e);
+                       }
+                   }
+               }
+            }
+        } else {
+            while (true){
+                System.out.println("checking: "+Math.abs(openDS.getS()-s) + " "+ (RoadID==openDS.getRoadID()) +" "+ (LaneID==openDS.getLaneID()) +" "+ (Math.abs(openDS.getS()-s)<1));
+                if (RoadID==openDS.getRoadID() && LaneID==openDS.getLaneID() && Math.abs(openDS.getS()-s)<1){
+                    if (checkAutopilot){
+                        if (autopilot==openDS.getAutopilot()){
+                            try {
+                                mqtt.publish("opends-holographic-interface/request/event",new MqttMessage(payload.getBytes(StandardCharsets.UTF_8)));
+                                return;
+                            } catch (MqttException e) {
+                                throw new RuntimeException(e);
+                            }
+                        }
+                    } else {
+                        try {
+                            mqtt.publish("opends-holographic-interface/request/event",new MqttMessage(payload.getBytes(StandardCharsets.UTF_8)));
+                            return;
+                        } catch (MqttException e) {
+                            throw new RuntimeException(e);
+                        }
+                    }
+                }
+            }
         }
+
+
+
     }
 }
