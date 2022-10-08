@@ -111,7 +111,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <text value="Image"/>
+            </properties>
           </component>
           <component id="354dd" class="javax.swing.JTextField" binding="textField2" default-binding="true">
             <constraints>
@@ -119,7 +121,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <text value="-1"/>
+            </properties>
           </component>
           <component id="ccd9a" class="javax.swing.JTextField" binding="textField3" default-binding="true">
             <constraints>
@@ -127,7 +131,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <text value="-1"/>
+            </properties>
           </component>
           <component id="97aea" class="javax.swing.JTextField" binding="textField4" default-binding="true">
             <constraints>
@@ -135,7 +141,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <text value="0"/>
+            </properties>
           </component>
           <component id="a05e0" class="javax.swing.JTextField" binding="textField5" default-binding="true">
             <constraints>
@@ -143,7 +151,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <text value="0"/>
+            </properties>
           </component>
           <component id="470ab" class="javax.swing.JTextField" binding="textField6" default-binding="true">
             <constraints>
@@ -151,7 +161,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <text value="5"/>
+            </properties>
           </component>
         </children>
       </grid>

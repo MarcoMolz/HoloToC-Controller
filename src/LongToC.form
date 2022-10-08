@@ -87,7 +87,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <text value="Long ToC"/>
+            </properties>
           </component>
           <component id="b34d4" class="javax.swing.JTextField" binding="textField2" default-binding="true">
             <constraints>
@@ -95,7 +97,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <text value="0"/>
+            </properties>
           </component>
           <component id="6a1f5" class="javax.swing.JTextField" binding="textField3" default-binding="true">
             <constraints>
@@ -103,7 +107,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <text value="2000"/>
+            </properties>
           </component>
         </children>
       </grid>

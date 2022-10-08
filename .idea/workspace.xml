@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58accea6-23b3-478d-a498-638640afcd3d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Delete.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Delete.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ActivatorThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActivatorThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Autopilot.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Autopilot.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomEvent.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomEvent.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CustomEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomModel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomModel.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LongToC.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/LongToC.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MQTT_Daemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MQTT_Daemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenDS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenDS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/holotoc.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/holotoc.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MediumToC.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MediumToC.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Recovery.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/Recovery.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ShortToC.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/ShortToC.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/holotoc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/holotoc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imageRequest.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageRequest.form" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +51,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "128",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "282",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "18",
     "last_opened_file_path": "C:/Users/Marco/Downloads/json-20200518.jar",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
@@ -119,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664940710777</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fixed some json errors">
+      <created>1664950547419</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1664950547419</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -140,6 +153,7 @@
     <MESSAGE value="removed old json parser, now using eclipse json minimal" />
     <MESSAGE value="Doing the json stuff now with hacky string splitting, the libraries keep crashing without errors" />
     <MESSAGE value="UI Improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI Improvements" />
+    <MESSAGE value="Fixed some json errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed some json errors" />
   </component>
 </project>

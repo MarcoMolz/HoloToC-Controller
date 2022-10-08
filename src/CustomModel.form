@@ -71,7 +71,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <text value="Model"/>
+            </properties>
           </component>
           <component id="40e5f" class="javax.swing.JCheckBox" binding="directPositioningCheckBox" default-binding="true">
             <constraints>
@@ -95,7 +97,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <text value="0"/>
+            </properties>
           </component>
           <component id="2faab" class="javax.swing.JLabel">
             <constraints>
@@ -127,7 +131,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <text value="0"/>
+            </properties>
           </component>
           <component id="9c1dd" class="javax.swing.JTextField" binding="latitude">
             <constraints>
@@ -135,7 +141,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <text value="0"/>
+            </properties>
           </component>
           <component id="a3898" class="javax.swing.JLabel">
             <constraints>
@@ -151,7 +159,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <text value="1"/>
+            </properties>
           </component>
           <component id="d2826" class="javax.swing.JLabel">
             <constraints>
@@ -183,7 +193,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <text value="1"/>
+            </properties>
           </component>
           <component id="c40ec" class="javax.swing.JTextField" binding="Zscale">
             <constraints>
@@ -191,7 +203,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <text value="1"/>
+            </properties>
           </component>
           <component id="474a7" class="javax.swing.JLabel">
             <constraints>
@@ -207,7 +221,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <text value="0"/>
+            </properties>
           </component>
           <component id="45154" class="javax.swing.JLabel">
             <constraints>
@@ -239,7 +255,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <text value="0"/>
+            </properties>
           </component>
           <component id="534bb" class="javax.swing.JTextField" binding="Zrot">
             <constraints>
@@ -247,7 +265,9 @@
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
-            <properties/>
+            <properties>
+              <text value="0"/>
+            </properties>
           </component>
           <component id="94d2e" class="javax.swing.JCheckBox" binding="alwaysFaceCameraCheckBox" default-binding="true">
             <constraints>

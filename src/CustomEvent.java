@@ -19,6 +19,7 @@ public class CustomEvent extends JDialog {
     private JCheckBox showGoalRingCheckBox;
     private JCheckBox showSignsCheckBox;
     private JCheckBox silentCheckBox;
+    private JCheckBox invertProgressBarCheckBox;
 
     public CustomEvent() {
         setContentPane(contentPane);
@@ -78,7 +79,8 @@ public class CustomEvent extends JDialog {
                 "      \"numOfNotifications\": "+(int)numofupdates.getValue()+",\n" +
                 "      \"visible\": "+showSignsCheckBox.isSelected()+",\n" +
                 "      \"silent\": "+silentCheckBox.isSelected()+",\n" +
-                "      \"ringVisible\": "+showGoalRingCheckBox.isSelected()+"\n" +
+                "      \"ringVisible\": "+showGoalRingCheckBox.isSelected()+",\n" +
+                "      \"invertProgress\": "+invertProgressBarCheckBox.isSelected()+"\n" +
                 "    }";
 
         System.out.println(msg);

@@ -23,6 +23,7 @@ public class MQTT_Daemon extends Thread {
                     client.subscribe("opends-holographic-interface/data/events",2);
                     client.subscribe("opends-holographic-interface/data/vehicle",2);
                     client.subscribe("opends-holographic-interface/data/road",2);
+                    client.subscribe("opends-holographic-interface/data/objects",2);
                     System.out.println("Connected "+client.isConnected());
 
                     holotoc.h.setTitle("HoloToC Event Controller : Connected");

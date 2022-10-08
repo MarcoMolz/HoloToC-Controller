@@ -3,9 +3,11 @@ import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 //import org.eclipse.paho.mqttv5.client.MqttConnectionOptions;
 
 import javax.swing.*;
+import javax.swing.event.ListDataListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 
 public class holotoc extends JFrame {
     private JButton processButton;
@@ -38,6 +40,9 @@ public class holotoc extends JFrame {
     private JLabel targetlabel;
     private JRadioButton positionRadioButton;
     private JRadioButton roadDataRadioButton;
+    private JList list1;
+
+    private Delete del;
 
     public static OpenDS openDS = new OpenDS();
 
@@ -161,6 +166,13 @@ public class holotoc extends JFrame {
                     customEvent.setSize(400,600);
                     customEvent.setVisible(true);
                 };
+
+                if (((String) comboBox1.getSelectedItem()).equals("Delete Instance")){
+                    del = new Delete();
+                    del.setTitle("Delete Instances");
+                    del.setSize(400,300);
+                    del.setVisible(true);
+                };
                 comboBox1.setSelectedIndex(0);
             }
         });
@@ -190,11 +202,11 @@ public class holotoc extends JFrame {
         //System.out.println(topic);
         String[] elems = msg.replace("\r","").replace("\n","").replace("\"","").replace(" ","").replace("{","").replace("}","").replace(",",":").split(":");
 
-        for (int i = 0; i<elems.length;i++){
-            elems[i] = elems[i].substring(0, Math.min(elems[i].length(), 7));
-        }
-
         if (topic.contains("data/vehicle")) {
+
+            for (int i = 0; i<elems.length;i++){
+                elems[i] = elems[i].substring(0, Math.min(elems[i].length(), 7));
+            }
 
             Xfield.setText("X: "+elems[3]);
             YField.setText("Y: "+elems[5]);
@@ -212,6 +224,10 @@ public class holotoc extends JFrame {
             openDS.setAutopilot(Boolean.parseBoolean(elems[13]));
 
         } else if (topic.contains("data/road")){
+
+            for (int i = 0; i<elems.length;i++){
+                elems[i] = elems[i].substring(0, Math.min(elems[i].length(), 7));
+            }
             RoadLabel.setText("RoadID: "+elems[3]);
             LaneLabel.setText("LaneID: "+elems[5]);
             sLabel.setText("s: "+elems[7]);
@@ -222,9 +238,24 @@ public class holotoc extends JFrame {
             openDS.setS(Float.parseFloat(elems[7]));
 
         } else if (topic.contains("data/events")){
+            for (int i = 0; i<elems.length;i++){
+                elems[i] = elems[i].substring(0, Math.min(elems[i].length(), 7));
+            }
             Eventfield.setText("Events: "+elems[5]);
             openfield.setText("Open: "+elems[7]);
+        }else if (topic.contains("data/objects")){
+            if (del == null) return;
+            StringBuilder text = new StringBuilder("ID : ObjectType\n");
+            for (int i = 0; i< elems.length; i+=2){
+                if (elems[i].contains("type") || (i+1 >= elems.length)){
+                    //do nothing
+                } else {
+                    text.append(elems[i]).append(" : ").append(elems[i + 1]).append("\n");
+                }
+            }
+            del.textArea1.setText(text.toString());
         }
+
 
     }
 }
