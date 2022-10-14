@@ -168,6 +168,7 @@
             <item value="Autopilot Request"/>
             <item value="Recovery Event"/>
             <item value="Custom Event"/>
+            <item value="Custom Notification"/>
             <item value="Custom Model"/>
             <item value="Custom Image"/>
             <item value="Delete Instance"/>

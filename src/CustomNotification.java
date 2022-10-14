@@ -1,5 +1,9 @@
 import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import java.awt.event.*;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 
 public class CustomNotification extends JDialog {
     private JPanel contentPane;
@@ -14,6 +18,7 @@ public class CustomNotification extends JDialog {
     private JTextField textField3;
     private JTextField textField4;
     private JTextField textField5;
+    private JLabel PercentageLabel;
 
     public CustomNotification() {
         setContentPane(contentPane);
@@ -46,6 +51,13 @@ public class CustomNotification extends JDialog {
                 onCancel();
             }
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+
+        slider1.addChangeListener(new ChangeListener() {
+            @Override
+            public void stateChanged(ChangeEvent e) {
+                PercentageLabel.setText(""+slider1.getValue());
+            }
+        });
     }
 
     private void onOK() {
@@ -63,7 +75,7 @@ public class CustomNotification extends JDialog {
                 "        \"color\": \""+color+"\",\n" +
                 "        \"topText\": \""+textField1.getText()+"\",\n" +
                 "        \"bottomText\": \""+textField2.getText()+"\",\n" +
-                "        \"percentage\": "+slider1.getValue()+"\n" +
+                "        \"percentage\": "+slider1.getValue()+",\n" +
                 "        \"direct\":"+directPositioningCheckBox.isSelected()+",\n" +
                 "        \"posX\":"+textField3.getText()+",\n" +
                 "        \"posY\":"+textField4.getText()+",\n" +
