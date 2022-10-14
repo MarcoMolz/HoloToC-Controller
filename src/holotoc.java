@@ -3,11 +3,9 @@ import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 //import org.eclipse.paho.mqttv5.client.MqttConnectionOptions;
 
 import javax.swing.*;
-import javax.swing.event.ListDataListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
 
 public class holotoc extends JFrame {
     private JButton processButton;
@@ -172,6 +170,13 @@ public class holotoc extends JFrame {
                     del.setTitle("Delete Instances");
                     del.setSize(400,300);
                     del.setVisible(true);
+                };
+
+                if (((String) comboBox1.getSelectedItem()).equals("Custom Notification")){
+                    CustomNotification customEvent = new CustomNotification();
+                    customEvent.setTitle("Custom Notification");
+                    customEvent.setSize(400,600);
+                    customEvent.setVisible(true);
                 };
                 comboBox1.setSelectedIndex(0);
             }
