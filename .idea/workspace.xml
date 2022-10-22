@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="58accea6-23b3-478d-a498-638640afcd3d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomNotification.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomNotification.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomNotification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/holotoc.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/holotoc.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomCallback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomModel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomModel.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imageRequest.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageRequest.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imageRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/imageRequest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665775092341</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="missing comma">
+      <created>1665776447944</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1665776447944</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -157,6 +166,7 @@
     <MESSAGE value="UI Improvements" />
     <MESSAGE value="Fixed some json errors" />
     <MESSAGE value="added custom notification" />
-    <option name="LAST_COMMIT_MESSAGE" value="added custom notification" />
+    <MESSAGE value="missing comma" />
+    <option name="LAST_COMMIT_MESSAGE" value="missing comma" />
   </component>
 </project>

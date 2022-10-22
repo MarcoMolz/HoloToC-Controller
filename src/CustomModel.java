@@ -17,6 +17,7 @@ public class CustomModel extends JDialog {
     private JTextField Yrot;
     private JTextField Zrot;
     private JCheckBox alwaysFaceCameraCheckBox;
+    private JCheckBox terrainCheckBox;
 
     public CustomModel() {
         setContentPane(contentPane);
@@ -55,7 +56,6 @@ public class CustomModel extends JDialog {
         String msg = "    {\n" +
                 "        \"type\":\"Object\",\n" +
                 "        \"name\":\""+NameField.getText() +"\",\n" +
-                "        \"id\":999,\n" +
                 "\n" +
                 "        \"direct\":"+directPositioningCheckBox.isSelected()+",\n" +
                 "\n" +
@@ -71,7 +71,8 @@ public class CustomModel extends JDialog {
                 "        \"rotY\":"+Yrot.getText()+",\n" +
                 "        \"rotZ\":"+Zrot.getText()+",\n" +
                 "\n" +
-                "        \"facingcamera\":"+alwaysFaceCameraCheckBox.isSelected()+"\n" +
+                "        \"facingcamera\":"+alwaysFaceCameraCheckBox.isSelected()+",\n" +
+                "        \"terrain\":"+terrainCheckBox.isSelected()+"\n" +
                 "    }";
 
         holotoc.h.textArea2.setText(msg);

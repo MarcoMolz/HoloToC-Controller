@@ -9,8 +9,6 @@ public class imageRequest extends JDialog {
     private JTextField textField1;
     private JTextField textField2;
     private JTextField textField3;
-    private JTextField textField4;
-    private JTextField textField5;
     private JTextField textField6;
 
     public imageRequest() {
@@ -50,10 +48,6 @@ public class imageRequest extends JDialog {
         String msg = " {\n" +
                 "      \"type\": \"image\",\n" +
                 "      \"name\": \""+textField1.getText()+"\",\n" +
-                "      \"w\": "+textField2.getText()+",\n" +
-                "      \"h\": "+textField3.getText()+",\n" +
-                "      \"x\": "+textField4.getText()+",\n" +
-                "      \"y\": "+textField5.getText()+",\n" +
                 "      \"duration\": "+textField6.getText()+"\n" +
                 "    }";
         holotoc.h.textArea2.setText(msg);
