@@ -246,7 +246,7 @@ public class holotoc extends JFrame {
             for (int i = 0; i<elems.length;i++){
                 elems[i] = elems[i].substring(0, Math.min(elems[i].length(), 7));
             }
-            Eventfield.setText("Events: "+elems[5]);
+            Eventfield.setText("Received: "+elems[5]);
             openfield.setText("Open: "+elems[7]);
         }else if (topic.contains("data/objects")){
             if (del == null) return;

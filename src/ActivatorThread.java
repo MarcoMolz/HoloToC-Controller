@@ -51,6 +51,7 @@ public class ActivatorThread extends Thread{
                        if (autopilot==openDS.getAutopilot()){
                            try {
                                mqtt.publish("opends-holographic-interface/request/event",new MqttMessage(payload.getBytes(StandardCharsets.UTF_8)));
+                               return;
                            } catch (MqttException e) {
                                throw new RuntimeException(e);
                            }
@@ -58,6 +59,7 @@ public class ActivatorThread extends Thread{
                    } else {
                        try {
                            mqtt.publish("opends-holographic-interface/request/event",new MqttMessage(payload.getBytes(StandardCharsets.UTF_8)));
+                           return;
                        } catch (MqttException e) {
                            throw new RuntimeException(e);
                        }
